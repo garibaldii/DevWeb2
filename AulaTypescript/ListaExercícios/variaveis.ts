@@ -135,7 +135,70 @@ function Questao6():void {
 
 function Questao7():void{
     let habitantes = leitor.question('Habitantes: ');
+    let porcentagemEleitores: number = Math.random();
 
-    console.log(Math.random() * 100);
-}
-Questao7();
+    let qtdEleitores = habitantes * porcentagemEleitores;
+
+    let porcentagemVotoBranco = (Math.random() * qtdEleitores) / 100;
+    let qtdVotoBranco = qtdEleitores * porcentagemVotoBranco;
+    let qtdEleitoresValidos = qtdEleitores - qtdVotoBranco;
+
+    let porcentagemVotoNulo: number = Math.random() * (porcentagemEleitores - porcentagemVotoBranco );
+    let qtdVotoNulo = porcentagemVotoNulo * qtdEleitoresValidos;
+
+    qtdEleitoresValidos -= qtdVotoNulo;
+
+    console.log(`TOTAL DA POPULAÇÃO VOTANTE DA CIDADE: ${100 * porcentagemEleitores}%`);
+    console.log(`CORRESPONDE A: ${qtdEleitores} pessoas`);
+    console.log(`--------------------------------------------------------------------------`);
+
+    console.log(`${100 * porcentagemVotoBranco}% votaram em branco.`);
+    console.log(`O QUE RESULTA EM ${qtdVotoBranco.toFixed(1)} votos brancos.`);
+    console.log(`---------------------------------------------------------------------------`);
+
+    console.log(`${100 * porcentagemVotoNulo}% votaram nulo`);
+    console.log(`O QUE RESULTA EM ${qtdVotoNulo.toFixed(1)} pessoas que votaram nulo`);
+
+    console.log(`${qtdEleitoresValidos.toFixed(1)} votaram em algum candidato`);
+
+
+
+};
+
+function Questao8():void{
+    let salarioAtual = leitor.question('Salario: ');
+    let porcentagemAumento = leitor.question('Porcentagem de aumento: ');
+
+    let novoSalario = salarioAtual * ( porcentagemAumento/100 + 1);
+
+    console.log(`Novo salário: ${novoSalario}`);
+};
+
+function Questao9():void{
+    let custoFabrica = leitor.question("Custo Fabrica: ");
+    let porcentagemDistribuidor = leitor.question("Porcentagem distribuidor: ");
+    let porcentagemImpostos = leitor.question("Porcentagem impostos: ");
+
+    let carroNovo = (custoFabrica * ((porcentagemDistribuidor / 100) + 1)) *  ((porcentagemImpostos / 100) + 1)
+    
+    console.log(`Preço do carro: ${carroNovo}`);
+};
+
+function Questao10(){
+    let numCarrosVendidos = leitor.question("Numero de carros vendidos: ");
+
+    let valorTotalVendas = leitor.question("Faturamento mensal: ");
+
+    let salarioFixo = leitor.question("Salario fixo: ");
+
+    let comissaoFixa = 500;
+
+    let porcentagemComissao = 0.05;
+    //ganho de 5%// ;
+
+    let formulaGanhoExtra = (numCarrosVendidos * comissaoFixa) + (valorTotalVendas * porcentagemComissao);
+
+    let salarioFinal = formulaGanhoExtra + Number(salarioFixo);
+    
+    console.log(`Ganho Extra: R$${formulaGanhoExtra} . Salário final: ${salarioFinal}`);
+};
