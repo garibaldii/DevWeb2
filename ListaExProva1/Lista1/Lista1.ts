@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 import { log } from "console";
+=======
+>>>>>>> 13323cdfa00db485707beeb391135233f94d414e
 import { deflate } from "zlib";
 
 var leitor = require("readline-sync");
@@ -115,6 +118,7 @@ function ex10() {
   console.log(calculoJuros);
 }
 
+<<<<<<< HEAD
 function ex11() {
   let x = leitor.question("X: ");
 
@@ -289,6 +293,9 @@ function ex16() {
       break;
   }
 }
+=======
+// ex10()
+>>>>>>> 13323cdfa00db485707beeb391135233f94d414e
 
 function ex17() {
   let regiao: string = leitor.question("Regiao Brasil: ").toLowerCase();
@@ -441,10 +448,17 @@ function ex23() {
     idades.push(idade);
   }
 
+<<<<<<< HEAD
   for (let index = 0; index < idades.length; index++) {
     if (idades[index] >= maiorIdade) {
       maiorIdade = idades[index];
       nomeMaiorIdade = nomes[index];
+=======
+  for(let index = 0; index < idades.length; index++){
+    if (idades[index] >= maiorIdade){
+        maiorIdade = idades[index];
+        nomeMaiorIdade = nomes[index];
+>>>>>>> 13323cdfa00db485707beeb391135233f94d414e
     }
   }
   console.log(`Pessoa de maior idade: ${nomeMaiorIdade}, ${maiorIdade} anos.`);
@@ -452,6 +466,7 @@ function ex23() {
 
 // ex23();
 
+<<<<<<< HEAD
 function ex24() {
   let listaImpares: number[] = [];
 
@@ -465,10 +480,29 @@ function ex24() {
   }
 
   console.log(listaImpares);
+=======
+function ex24(){
+    let listaImpares:number[] = []
+
+    let limite = parseInt(leitor.question("Digite um numero: "))
+    for (let index = 1; index < limite + 1; index++) {
+        if (index % 2 != 0){
+            listaImpares.push(index);
+        }
+        else{
+            continue;
+        }        
+    }
+
+
+    console.log(listaImpares);
+
+>>>>>>> 13323cdfa00db485707beeb391135233f94d414e
 }
 
 // ex24()
 
+<<<<<<< HEAD
 function ex25() {
   const dataAtual = new Date();
   const anoAtual = dataAtual.getFullYear();
@@ -478,10 +512,22 @@ function ex25() {
   for (let index = anoAtual; index > anoNascimento; index--) {
     console.log(`Ano: ${index},  Idade: ${index - anoNascimento}`);
   }
+=======
+function ex25(){
+    const dataAtual = new Date();
+    const anoAtual = dataAtual.getFullYear();
+
+    let anoNascimento = leitor.question("Ano de nascimento: ")
+
+    for (let index = anoAtual; index > anoNascimento; index--) {
+        console.log(`Ano: ${index},  Idade: ${index - anoNascimento}`);
+    }
+>>>>>>> 13323cdfa00db485707beeb391135233f94d414e
 }
 
 // ex25()
 
+<<<<<<< HEAD
 function ex26() {
   let qtdFunc = parseFloat(leitor.question("Quantidade de funcionarios: "));
 
@@ -536,3 +582,8 @@ for (let coluna = 1; coluna < 3 ; coluna ++) {
   for (let linha = 1; linha < 11; linha++) {}
 }
 // ex27();
+=======
+function ex26(){
+    
+}
+>>>>>>> 13323cdfa00db485707beeb391135233f94d414e

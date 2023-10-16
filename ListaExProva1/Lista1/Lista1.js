@@ -72,6 +72,7 @@ function ex10() {
     var calculoJuros = (valorInicial * atraso) / 100 + valorInicial;
     console.log(calculoJuros);
 }
+<<<<<<< HEAD
 function ex11() {
     var x = leitor.question("X: ");
     var y = leitor.question("Y: ");
@@ -224,6 +225,9 @@ function ex16() {
             break;
     }
 }
+=======
+// ex10()
+>>>>>>> 13323cdfa00db485707beeb391135233f94d414e
 function ex17() {
     var regiao = leitor.question("Regiao Brasil: ").toLowerCase();
     if (regiao == "centro oeste") {
@@ -375,6 +379,7 @@ function ex25() {
         console.log("Ano: ".concat(index, ",  Idade: ").concat(index - anoNascimento));
     }
 }
+<<<<<<< HEAD
 // ex25()
 function ex26() {
     var qtdFunc = parseFloat(leitor.question("Quantidade de funcionarios: "));
@@ -414,3 +419,6 @@ function ex27() {
     }
 }
 ex27();
+=======
+ex25();
+>>>>>>> 13323cdfa00db485707beeb391135233f94d414e
