@@ -1,0 +1,13 @@
+{
+  "name": "listaexercicios",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Lista1.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "tsc && node Lista1.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
