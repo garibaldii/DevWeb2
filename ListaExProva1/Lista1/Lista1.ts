@@ -1,7 +1,5 @@
-<<<<<<< HEAD
 import { log } from "console";
-=======
->>>>>>> 13323cdfa00db485707beeb391135233f94d414e
+import { cachedDataVersionTag } from "v8";
 import { deflate } from "zlib";
 
 var leitor = require("readline-sync");
@@ -118,7 +116,6 @@ function ex10() {
   console.log(calculoJuros);
 }
 
-<<<<<<< HEAD
 function ex11() {
   let x = leitor.question("X: ");
 
@@ -293,9 +290,6 @@ function ex16() {
       break;
   }
 }
-=======
-// ex10()
->>>>>>> 13323cdfa00db485707beeb391135233f94d414e
 
 function ex17() {
   let regiao: string = leitor.question("Regiao Brasil: ").toLowerCase();
@@ -448,17 +442,10 @@ function ex23() {
     idades.push(idade);
   }
 
-<<<<<<< HEAD
   for (let index = 0; index < idades.length; index++) {
     if (idades[index] >= maiorIdade) {
       maiorIdade = idades[index];
       nomeMaiorIdade = nomes[index];
-=======
-  for(let index = 0; index < idades.length; index++){
-    if (idades[index] >= maiorIdade){
-        maiorIdade = idades[index];
-        nomeMaiorIdade = nomes[index];
->>>>>>> 13323cdfa00db485707beeb391135233f94d414e
     }
   }
   console.log(`Pessoa de maior idade: ${nomeMaiorIdade}, ${maiorIdade} anos.`);
@@ -466,7 +453,6 @@ function ex23() {
 
 // ex23();
 
-<<<<<<< HEAD
 function ex24() {
   let listaImpares: number[] = [];
 
@@ -480,29 +466,10 @@ function ex24() {
   }
 
   console.log(listaImpares);
-=======
-function ex24(){
-    let listaImpares:number[] = []
-
-    let limite = parseInt(leitor.question("Digite um numero: "))
-    for (let index = 1; index < limite + 1; index++) {
-        if (index % 2 != 0){
-            listaImpares.push(index);
-        }
-        else{
-            continue;
-        }        
-    }
-
-
-    console.log(listaImpares);
-
->>>>>>> 13323cdfa00db485707beeb391135233f94d414e
 }
 
 // ex24()
 
-<<<<<<< HEAD
 function ex25() {
   const dataAtual = new Date();
   const anoAtual = dataAtual.getFullYear();
@@ -512,22 +479,10 @@ function ex25() {
   for (let index = anoAtual; index > anoNascimento; index--) {
     console.log(`Ano: ${index},  Idade: ${index - anoNascimento}`);
   }
-=======
-function ex25(){
-    const dataAtual = new Date();
-    const anoAtual = dataAtual.getFullYear();
-
-    let anoNascimento = leitor.question("Ano de nascimento: ")
-
-    for (let index = anoAtual; index > anoNascimento; index--) {
-        console.log(`Ano: ${index},  Idade: ${index - anoNascimento}`);
-    }
->>>>>>> 13323cdfa00db485707beeb391135233f94d414e
 }
 
 // ex25()
 
-<<<<<<< HEAD
 function ex26() {
   let qtdFunc = parseFloat(leitor.question("Quantidade de funcionarios: "));
 
@@ -539,7 +494,9 @@ function ex26() {
 
   for (let i = 1; i < qtdFunc + 1; i++) {
     nome = leitor.question("Nome: ");
-    tempoFirma = parseFloat(leitor.question("Quantidade de meses trabalhados: "));
+    tempoFirma = parseFloat(
+      leitor.question("Quantidade de meses trabalhados: ")
+    );
 
     if (tempoFirma > 12) {
       console.log(`${nome} tem direito a ferias. `);
@@ -554,10 +511,10 @@ function ex26() {
 
 // ex26();
 
-function ex27(){
+function ex27() {
   let qtdAluno = parseFloat(leitor.question("Quantidade de Alunos: "));
-  let aprovado:boolean;
-  
+  let aprovado: boolean;
+
   for (let index = 1; index < qtdAluno + 1; index++) {
     console.log(`Aluno ${index}`);
     let nota1 = parseFloat(leitor.question("Nota um: "));
@@ -565,25 +522,84 @@ function ex27(){
 
     let media = (nota1 + nota2) / 2;
 
-    if (media >= 6){
+    if (media >= 6) {
       aprovado = true;
       console.log(aprovado);
-    }
-
-    else{
+    } else {
       aprovado = false;
       console.log(aprovado);
     }
   }
 }
-for (let coluna = 1; coluna < 3 ; coluna ++) {
-  
 
-  for (let linha = 1; linha < 11; linha++) {}
+function ex28() {
+  for (let coluna = 9; coluna < 10; coluna++) {
+    for (let linha = 1; linha < 11; linha++) {
+      console.log(`${linha} * ${coluna} = ${linha * coluna}`);
+    }
+  }
 }
-// ex27();
-=======
-function ex26(){
+// ex28();
+
+function ex29() {//incompleto
+  let qtdClientes,
+    qtdProdutos,
+    escolha = Math.ceil((Math.random() * 10) / 2);
+  let fechamentoCaixa: number = 0;
+
+  const padraoProdutos: { [chave: string]: number } = {
+    "Barra de Chocolate": 10,
+    Arroz: 20,
+    Feijao: 8,
+    "File de frango": 14,
+    Detergente: 2,
+  };
+
+  
+  for (let index = 1; index < 5 + 1; index++) {
+    console.log(`cliente ${index}`);
+
+    for (const chave in padraoProdutos) {
+      const valoresLista = Object.values(padraoProdutos)
+
+      console.log(valoresLista[escolha]);     
+    }
+  }
+}
+
+// ex29();
+
+function ex30(){
+  let mediaGeral:number = 0;
+
+  let qtdTurmas = parseFloat(leitor.question("Qtd de turmas: "));
+
+  for (let turma = 1; turma < qtdTurmas + 1; turma ++) {
+
+    let qtdAlunos = parseFloat(leitor.question(`Qtd alunos na turma ${turma}: `));
+
+    for (let aluno = 1; aluno < qtdAlunos + 1; aluno++) {
+
+      let mediaIndividual = parseFloat(leitor.question(`Media do aluno ${aluno} da turma ${turma}: `));
+      
+      mediaGeral += mediaIndividual;
+      
+    }
+    console.log(`Media geral da turma ${turma} é : ${mediaGeral / qtdAlunos}`);
+    mediaGeral = 0;
+  }
+}
+
+// ex30();
+
+function ex31(){
+  let n:number = parseFloat(leitor.question("Numero: "));
+  for (let linha = 0; linha < n + 1 ; linha++) {
+    let padrao = "* ";
+    console.log(padrao.repeat(linha)); // aqui ele vai repetir o "  *  " de acordo com a quantidade de linhas que estão sendo atualizadas, linha 1 = * \n linha 2 =  * * e assim por diante. 
     
 }
->>>>>>> 13323cdfa00db485707beeb391135233f94d414e
+}
+
+ex31();
+

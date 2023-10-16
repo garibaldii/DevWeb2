@@ -72,7 +72,6 @@ function ex10() {
     var calculoJuros = (valorInicial * atraso) / 100 + valorInicial;
     console.log(calculoJuros);
 }
-<<<<<<< HEAD
 function ex11() {
     var x = leitor.question("X: ");
     var y = leitor.question("Y: ");
@@ -225,9 +224,6 @@ function ex16() {
             break;
     }
 }
-=======
-// ex10()
->>>>>>> 13323cdfa00db485707beeb391135233f94d414e
 function ex17() {
     var regiao = leitor.question("Regiao Brasil: ").toLowerCase();
     if (regiao == "centro oeste") {
@@ -379,7 +375,6 @@ function ex25() {
         console.log("Ano: ".concat(index, ",  Idade: ").concat(index - anoNascimento));
     }
 }
-<<<<<<< HEAD
 // ex25()
 function ex26() {
     var qtdFunc = parseFloat(leitor.question("Quantidade de funcionarios: "));
@@ -418,7 +413,52 @@ function ex27() {
         }
     }
 }
-ex27();
-=======
-ex25();
->>>>>>> 13323cdfa00db485707beeb391135233f94d414e
+function ex28() {
+    for (var coluna = 9; coluna < 10; coluna++) {
+        for (var linha = 1; linha < 11; linha++) {
+            console.log("".concat(linha, " * ").concat(coluna, " = ").concat(linha * coluna));
+        }
+    }
+}
+// ex28();
+function ex29() {
+    var qtdClientes, qtdProdutos, escolha = Math.ceil((Math.random() * 10) / 2);
+    var fechamentoCaixa = 0;
+    var padraoProdutos = {
+        "Barra de Chocolate": 10,
+        Arroz: 20,
+        Feijao: 8,
+        "File de frango": 14,
+        Detergente: 2,
+    };
+    for (var index = 1; index < 5 + 1; index++) {
+        console.log("cliente ".concat(index));
+        for (var chave in padraoProdutos) {
+            var valoresLista = Object.values(padraoProdutos);
+            console.log(valoresLista[escolha]);
+        }
+    }
+}
+// ex29();
+function ex30() {
+    var mediaGeral = 0;
+    var qtdTurmas = parseFloat(leitor.question("Qtd de turmas: "));
+    for (var turma = 1; turma < qtdTurmas + 1; turma++) {
+        var qtdAlunos = parseFloat(leitor.question("Qtd alunos na turma ".concat(turma, ": ")));
+        for (var aluno = 1; aluno < qtdAlunos + 1; aluno++) {
+            var mediaIndividual = parseFloat(leitor.question("Media do aluno ".concat(aluno, " da turma ").concat(turma, ": ")));
+            mediaGeral += mediaIndividual;
+        }
+        console.log("Media geral da turma ".concat(turma, " \u00E9 : ").concat(mediaGeral / qtdAlunos));
+        mediaGeral = 0;
+    }
+}
+// ex30();
+function ex31() {
+    var n = parseFloat(leitor.question("Numero: "));
+    for (var linha = 0; linha < n + 1; linha++) {
+        var padrao = "* ";
+        console.log(padrao.repeat(linha));
+    }
+}
+ex31();
