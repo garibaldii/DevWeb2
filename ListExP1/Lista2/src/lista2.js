@@ -246,18 +246,63 @@ function ex19() {
 function ex20() {
     let contador = 0;
     let listaNumeros = [];
-    for (let i = 0; i < 5; i++) {
+    let listaNumerosRepetidos = [];
+    for (let i = 0; i < 10; i++) {
         let valor = ex19();
         listaNumeros.push(valor);
     }
     for (let index = 0; index < listaNumeros.length + 1; index++) {
-        for (let celula = index + 1; celula < listaNumeros.length + 1; celula++) {
-            if ((listaNumeros[index] == listaNumeros[celula + 1])) {
+        for (let celula = index + 1; celula < listaNumeros.length; celula++) {
+            if ((listaNumeros[index] == listaNumeros[celula])) {
+                listaNumerosRepetidos.push(listaNumeros[index]);
+                break; // com esse break, a lista vai pausar assim que encontrar um número igual, 
+                // impossibilitando de números serem adicionados mais de uma vez, sendo que já foram adicionados na rodada passada.
+            }
+            continue;
+        }
+    }
+    for (let i = 0; i < listaNumerosRepetidos.length; i++) {
+        contador = 0;
+        for (let j = 0; j < listaNumerosRepetidos.length; j++) {
+            if ((listaNumerosRepetidos[i] == listaNumerosRepetidos[j])) {
                 contador++;
             }
         }
+        console.log(`o número ${listaNumerosRepetidos[i]} apareceu ${contador} vez(es)`);
     }
     console.log(listaNumeros);
-    console.log(contador);
+    console.log(listaNumerosRepetidos);
 }
-ex20();
+// ex20();
+function ex21() {
+    let escolha = leitor.question("(C) para Ceusius e (F) para Farenheit: ");
+    let temperatura;
+    switch (escolha) {
+        case "F":
+            temperatura = parseFloat(leitor.question("temperatura: "));
+            let C = 5 * (temperatura - 32) / 9;
+            return C;
+        case "C":
+            temperatura = parseFloat(leitor.question("temperatura: "));
+            let F = (9 * (temperatura / 5) + 32);
+            return F;
+        default:
+            console.log("Entre com F ou C");
+    }
+}
+// console.log(ex21());
+function ex22(a, b, c) {
+    let listaNotas = [a, b, c];
+    console.log(listaNotas);
+    let mediaGeral = (a + b + c) / 3;
+    let notaAlta = Math.max(a, b, c);
+    let notaBaixa = Math.min(a, b, c);
+    listaNotas.sort((a, b) => b - a); // deixa em ordem crescente
+    console.log(listaNotas);
+    let mediaAlta = (listaNotas[0] + listaNotas[1]) / 2;
+    console.log(mediaGeral);
+    console.log(notaAlta);
+    console.log(notaBaixa);
+    console.log(mediaAlta);
+}
+ex22(8, 10, 2);

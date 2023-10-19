@@ -1,0 +1,13 @@
+{
+  "name": "classes",
+  "version": "1.0.0",
+  "main": "Filme.js",
+  "scripts": {
+    "start": "tsc && node Filme.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
