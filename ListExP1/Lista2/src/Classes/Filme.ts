@@ -1,4 +1,5 @@
 class Filme {
+
   private titulo: string;
 
   private duracaoEmMinutos: number;
@@ -40,3 +41,4 @@ class Filme {
 const ET = new Filme("ET, o extraterrestre", 105);
 
 console.log(ET.exibirDuracaoEmHoras(ET.getDuracaoEmMinutos()));
+module.exports = Filme;

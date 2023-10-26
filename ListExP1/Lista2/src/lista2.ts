@@ -412,4 +412,5 @@ function ex22(a:number, b:number, c:number){
 }
 
 
-ex22(8,10,2);
+// ex22(8,10,2);
+

@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "Filme.js",
   "scripts": {
-    "start": "tsc && node Filme.js",
+    "start": "tsc && node TestarFilme.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

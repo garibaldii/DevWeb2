@@ -1,5 +1,10 @@
+
+
 class TestarFilme {
-    constructor(parameters) {
-        
-    }
+    
+    
+    
 }
+const filmeQualquer = new Filme("Vingadores", 142);
+
+console.log(filmeQualquer.exibirDuracaoEmHoras(2));

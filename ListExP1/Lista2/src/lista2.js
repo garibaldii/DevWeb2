@@ -305,4 +305,4 @@ function ex22(a, b, c) {
     console.log(notaBaixa);
     console.log(mediaAlta);
 }
-ex22(8, 10, 2);
+// ex22(8,10,2);

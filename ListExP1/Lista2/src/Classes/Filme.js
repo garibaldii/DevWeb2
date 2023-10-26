@@ -1,30 +1,35 @@
 "use strict";
-class Filme {
-    constructor(titulo, duracaoEmMinutos) {
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Filme = void 0;
+var Filme = /** @class */ (function () {
+    function Filme(titulo, duracaoEmMinutos) {
         this.titulo = titulo;
         this.duracaoEmMinutos = duracaoEmMinutos;
     }
     //Getters
-    getTitulo() {
+    Filme.prototype.getTitulo = function () {
         return this.titulo;
-    }
-    getDuracaoEmMinutos() {
+    };
+    Filme.prototype.getDuracaoEmMinutos = function () {
         return this.duracaoEmMinutos;
-    }
+    };
     //
     // Setters
-    setTitulo(titulo) {
+    Filme.prototype.setTitulo = function (titulo) {
         this.titulo = titulo;
-    }
-    setDuracaoEmMinutos(duracaoEmMinutos) {
+    };
+    Filme.prototype.setDuracaoEmMinutos = function (duracaoEmMinutos) {
         this.duracaoEmMinutos = duracaoEmMinutos;
-    }
+    };
     //
-    exibirDuracaoEmHoras(duracaoEmMinutos) {
-        let minutos = (duracaoEmMinutos % 60);
-        let hora = ~~(duracaoEmMinutos / 60);
-        return `o filme ${this.getTitulo()} possui ${hora} horas e ${minutos} minutos de gravacao`;
-    }
-}
-const ET = new Filme("ET, o extraterrestre", 105);
-// console.log(ET.exibirDuracaoEmHoras(ET.getDuracaoEmMinutos()));
+    Filme.prototype.exibirDuracaoEmHoras = function (duracaoEmMinutos) {
+        var minutos = (duracaoEmMinutos % 60);
+        var hora = ~~(duracaoEmMinutos / 60);
+        return "o filme ".concat(this.getTitulo(), " possui ").concat(hora, " horas e ").concat(minutos, " minutos de gravacao");
+    };
+    return Filme;
+}());
+exports.Filme = Filme;
+var ET = new Filme("ET, o extraterrestre", 105);
+console.log(ET.exibirDuracaoEmHoras(ET.getDuracaoEmMinutos()));
+module.exports = Filme;
